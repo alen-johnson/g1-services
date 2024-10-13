@@ -31,7 +31,7 @@ app.get('/api/athletes', async (req, res) => {
     res.json(items);
   } catch (error) {
     console.log('Error while fetching:', error);
-    res.status(500).send('Error Fetching Data');
+    res.status(500).send('Error Fetching Dat');
   }
 });
 
