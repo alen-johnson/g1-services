@@ -35,9 +35,7 @@ app.get('/api/athletes', async (req, res) => {
   } catch (error) {
     console.log('Error while fetching:', error);
     res.status(500).send('Error Fetching Data');
-  } finally {
-    await client.close()
-  }
+  } 
 });
 
 app.get('/api/sports', async ( req, res) => {
@@ -48,8 +46,6 @@ app.get('/api/sports', async ( req, res) => {
   } catch (error){
     console.log('Error while fetching', error);
     res.status(500).send('Error Fetching Data')
-  }finally {
-    await client.close()
   }
 })
 app.get('/api/fictions', async ( req, res) => {
@@ -60,8 +56,6 @@ app.get('/api/fictions', async ( req, res) => {
   } catch (error){
     console.log('Error while fetching', error);
     res.status(500).send('Error Fetching Data')
-  }finally {
-    await client.close()
   }
 })
 app.get('/api/celebrities', async ( req, res) => {
@@ -72,8 +66,6 @@ app.get('/api/celebrities', async ( req, res) => {
   } catch (error){
     console.log('Error while fetching', error);
     res.status(500).send('Error Fetching Data')
-  }finally {
-    await client.close()
   }
 })
 
