@@ -27,17 +27,6 @@ const connectToMongo = async () => {
 };
 
 // Fetch athletes data
-app.get('/api/athletes', async (req, res) => {
-  try {
-    const collection = db.collection('athletes');
-    const items = await collection.find({}).toArray();
-    res.json(items);
-  } catch (error) {
-    console.log('Error while fetching:', error);
-    res.status(500).send('Error Fetching Data');
-  } 
-});
-
 app.get('/api/sports', async ( req, res) => {
   try {
   const collection = db.collection('sports');
