@@ -2,4 +2,4 @@ const mongoose = require('mongoose');
 
 const baseSchema = require('./baseSchema');
 
-module.exports = mongoose.model('athlete', baseSchema);
+module.exports = mongoose.model('household', baseSchema);
