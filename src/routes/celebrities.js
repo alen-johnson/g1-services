@@ -4,7 +4,7 @@ const { getDb } = require("../config/db");
 
 router.get('/api/celebrities', async (req, res) => {
   try {
-    const collection = getDb.collection("celebrities");
+    const collection = getDb().collection("celebrities");
     const items = await collection.find({}).toArray();
     res.json(items);
   } catch (error) {
